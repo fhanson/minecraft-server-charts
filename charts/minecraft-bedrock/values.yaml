@@ -231,12 +231,14 @@ persistence:
   dataDir:
     # Set this to false if you don't care to persist state between restarts.
     enabled: false
-    existingClaim: nil
+    # existingClaim: nil
     Size: 1Gi
     # access modes used by the volume, RWO by default,
     # ensure your storage class supports other modes if chosen
     accessModes:
       - ReadWriteOnce
+    # hostPath if creating a persistent volume
+    # hostPath:
 
 podAnnotations: {}
 
