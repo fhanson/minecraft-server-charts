@@ -188,7 +188,7 @@ spec:
           mountPath: /tmp
         - name: datadir
           mountPath: /data
-        {{- range .Values.extraVolumes }}
+        {{- if .Values.extraVolumes }}
         {{-   if .volumeMounts }}
         {{-     toYaml .volumeMounts | nindent 8 }}
         {{-   end }}
@@ -216,7 +216,7 @@ spec:
       - name: datadir
         emptyDir: {}
       {{- end }}
-      {{- range .Values.extraVolumes }}
+      {{- if .Values.extraVolumes }}
       {{- toYaml .volumes | nindent 6 }}
       {{- end }}
     {{- if .Values.nodeSelector }}
