@@ -237,8 +237,6 @@ persistence:
     # ensure your storage class supports other modes if chosen
     accessModes:
       - ReadWriteOnce
-    # hostPath if creating a persistent volume
-    # hostPath:
 
 podAnnotations: {}
 
